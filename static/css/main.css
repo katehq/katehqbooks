@@ -1,0 +1,33 @@
+body {
+    font-family: 'Merriweather', serif;
+    background: #F4F2E9;
+    margin: 0 auto;
+    width: 52em;
+}
+
+.cell{
+    border: 1px solid;
+    margin: 1px 0;
+    padding: 2px;
+}
+.cell{
+    display: flex;
+    flex-direction: row;
+}
+.container img {
+    height: 60px;
+}
+.container span {
+    vertical-align: top;
+}
+
+.author-name {
+    font-size: 10px;
+}
+
+@media all and (max-width: 768px) {
+    body {
+        margin: 0 auto;
+        width: 100%;
+    }
+}

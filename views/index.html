@@ -1,0 +1,24 @@
+{{ template "header" }}
+<body>
+    <header>
+            <nav>
+                    <img src="/static/images/logo/logo.png" alt="logo"> <span> Books </span>
+            </nav>
+    </header>
+
+    <div class="container">
+            {{ range .books }}
+            <div class="cell">
+                    
+                    <div>
+                            <span> {{ .Title }} </span> <br>
+                            <span class="author-name">{{ .Author }}</span> <br>
+                            <span class="desc-info"> {{ .Desc }} </span>
+                    </div>
+                    
+            </div>
+            {{ end }}
+    </div>
+</body>
+
+</html>
