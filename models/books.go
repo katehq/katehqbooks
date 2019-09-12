@@ -12,6 +12,7 @@ type Book struct {
 	Author string
 	Link   string
 	Desc   string
+	Cover  string
 }
 
 func (book *Book) InsertBook() {
@@ -26,4 +27,10 @@ func (book *Book) GetAll() []Book {
 	var books []Book
 	db.Find(&books)
 	return books
+}
+
+func (book *Book) FindByID(id int) {
+	db := utils.OpenDB()
+	defer db.Close()
+	db.Where("id = ?", id).Find(&book)
 }

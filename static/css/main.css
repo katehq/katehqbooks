@@ -4,11 +4,21 @@ body {
     margin: 0 auto;
     width: 52em;
 }
+a {
+    text-decoration: none;
+    color: #181818;
+}
+
+a:hover {
+    text-decoration: underline;
+}
 
 .cell{
-    border: 1px solid;
+    border: 1px solid #dedcce;
     margin: 1px 0;
     padding: 2px;
+    background: #FFFFFF;
+    border-radius: 4px;
 }
 .cell{
     display: flex;
@@ -23,6 +33,10 @@ body {
 
 .author-name {
     font-size: 10px;
+}
+
+.cover-img {
+    margin-right: 3px;
 }
 
 @media all and (max-width: 768px) {

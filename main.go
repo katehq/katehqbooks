@@ -13,7 +13,7 @@ func main() {
 	r.GET("/", controllers.Index)
 	r.GET("/migrate", controllers.Migrate)
 	r.GET("/books/new", controllers.AddBook)
-	
+	r.GET("/books/show/:id", controllers.BookDetail)
 
 	//POST
 	r.POST("/books/new", controllers.AddBookPOST)

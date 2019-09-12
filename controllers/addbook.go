@@ -14,11 +14,13 @@ func AddBookPOST(c *gin.Context) {
 	author := c.PostForm("author")
 	link := c.PostForm("link")
 	desc := c.PostForm("desc")
+	cover := c.PostForm("cover")
 	book := models.Book{
 		Title:  title,
 		Author: author,
 		Link:   link,
 		Desc:   desc,
+		Cover: cover,
 	}
 	book.InsertBook()
 }
