@@ -20,7 +20,7 @@ func AddBookPOST(c *gin.Context) {
 		Author: author,
 		Link:   link,
 		Desc:   desc,
-		Cover: cover,
+		Cover:  cover,
 	}
 	book.InsertBook()
 }

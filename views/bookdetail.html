@@ -1,5 +1,49 @@
-{{ .title }} <br>
- <a href="{{ .link }}"> Read More </a> <br>
- {{ .desc }} <br>
- {{ .author }} <br>
- <img src="{{ .cover }}" alt="">
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/static/css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" rel="stylesheet">
+    <title> {{ .title }} Kate HQ Books</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <img src="/static/images/logo/logo.png" alt="logo"> <span>Chinese Open Source Books </span>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="cell">
+            <div class="cover-img">
+
+                <img src="{{ .cover }}" alt="">
+            </div>
+            <div>
+                <span> {{ .title }}</span> <br>
+                <span class="author-name">{{ .author }}</span> <br>
+                <span class="desc-info"> {{ .desc }} </span><br>
+                <hr>
+                
+                <span><a href="{{ .link }}"> Official Site </a> </span> <br>
+            </div>
+
+        </div>
+        <div class="random-books" >
+            {{ range .books }}
+            <div class="book-cover" >
+                <a href="/books/show/{{.ID}}">
+                <img class="book-img" src="{{ .Cover }}" alt="">
+                </a>
+            </div>
+            {{end}}
+        </div>
+        
+    
+    </div>
+
+
+    {{template "footer"}}

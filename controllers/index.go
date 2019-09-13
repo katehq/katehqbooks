@@ -5,10 +5,10 @@ import (
 	"katehqbooks/models"
 )
 
-func Index(c *gin.Context)  {
+func Index(c *gin.Context) {
 	var book models.Book
-	books := book.GetAll()
+	books := book.GetLatest()
 	c.HTML(200, "index.html", gin.H{
-		"books" : books,
+		"books": books,
 	})
 }

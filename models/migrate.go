@@ -7,5 +7,5 @@ import (
 func AutoMigrate() {
 	db := utils.OpenDB()
 	defer db.Close()
-	db.AutoMigrate(&Book{})
+	db.AutoMigrate(&Book{}, &Page{})
 }

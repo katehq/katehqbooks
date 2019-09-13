@@ -39,6 +39,27 @@ a:hover {
     margin-right: 3px;
 }
 
+.footer-ul {
+    list-style: none;
+}
+
+.footer-list {
+    display: inline;
+}
+.random-books {
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    margin: 0px 10px;
+}
+.book-cover {
+    margin: 20px 5px;
+}
+
+.book-cover img {
+    height: 130px;
+}
+
 @media all and (max-width: 768px) {
     body {
         margin: 0 auto;

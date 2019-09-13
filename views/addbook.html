@@ -1,9 +1,15 @@
 {{ template "header" }}
 <form action="/books/new" method="post">
-<input type="text" name="title"> <br>
-<input type="text" name="author"> <br>
-<input type="text" name="desc"> <br>
-<input type="text" name="link"> <br>
-<input type="text" name="cover"> <br>
-<input type="submit" value="ADD"> <br>
+    <label for="title">Title</label><br>
+    <input type="text" name="title"> <br>
+    <label for="author">Auhor</label><br>
+    <input type="text" name="author"> <br>
+    <label for="link">Link</label><br>
+    <input type="text" name="link"> <br>
+    <label for="coover">Cover</label><br>
+    <input type="text" name="cover"> <br>
+    <label for="desc">Desc</label><br>
+    <textarea name="desc"cols="30" rows="10"></textarea><br>
+    <input type="submit" value="ADD"> <br>
 </form>
+{{ template "footer" }}

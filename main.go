@@ -14,7 +14,8 @@ func main() {
 	r.GET("/migrate", controllers.Migrate)
 	r.GET("/books/new", controllers.AddBook)
 	r.GET("/books/show/:id", controllers.BookDetail)
-
+	r.GET("/pages/new", controllers.AddPage)
+	r.GET("/page/:title", controllers.ShowPage)
 	//POST
 	r.POST("/books/new", controllers.AddBookPOST)
 
