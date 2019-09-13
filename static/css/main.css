@@ -41,6 +41,7 @@ a:hover {
 
 .footer-ul {
     list-style: none;
+    padding-inline-start: 0px;
 }
 
 .footer-list {
@@ -50,7 +51,7 @@ a:hover {
     display: flex;
     flex-direction: row;
     justify-content:center;
-    margin: 0px 10px;
+    margin: 0px 0px;
 }
 .book-cover {
     margin: 20px 5px;

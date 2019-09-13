@@ -1,26 +1,27 @@
 {{ template "header" }}
+
 <body>
-    <header>
-            <nav>
-                    <img src="/static/images/logo/logo.png" alt="logo"> <span>Chinese Open Source Books  </span>
-            </nav>
-    </header>
+        <header>
+                <nav>
+                        <img src="/static/images/logo/logo.png" alt="logo"> <span>开源书籍</span>
+                </nav>
+        </header>
 
-    <div class="container">
-            {{ range .books }}
-            <div class="cell">
-                <div class="cover-img">
+        <div class="container">
+                {{ range .books }}
+                <div class="cell">
+                        <div class="cover-img">
 
-                        <img  src="{{ .Cover }}" alt="">
+                                <img src="{{ .Cover }}" alt="">
+
+                        </div>
+                        <div>
+                                <span> <a href="/books/show/{{.ID}}"> {{ .Title }} </a></span> <br>
+                                <span class="author-name">{{ .Author }}</span> <br>
+                                <span class="desc-info"> {{ .Desc }} </span>
+                        </div>
 
                 </div>
-                    <div>
-                            <span> <a href="/books/show/{{.ID}}"> {{ .Title }} </a></span> <br>
-                            <span class="author-name">{{ .Author }}</span> <br>
-                            <span class="desc-info"> {{ .Desc }} </span>
-                    </div>
-                    
-            </div>
-            {{ end }}
-    </div>
-{{ template "footer" }}
+                {{ end }}
+        </div>
+        {{ template "footer" }}

@@ -1,2 +1,10 @@
-{{.title}} <br>
-{{.content}}
+{{template "header"}}
+
+<h1>{{.title}}</h1>
+<hr style="width: 50%; float:left;"><br>
+<article>
+
+    {{.content}}
+</article>
+
+{{template "footer"}}

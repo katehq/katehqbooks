@@ -13,10 +13,11 @@
 <body>
     <header>
         <nav>
-            <img src="/static/images/logo/logo.png" alt="logo"> <span>Chinese Open Source Books </span>
+            <img src="/static/images/logo/logo.png" alt="logo"> <span>开源书籍</span>
         </nav>
     </header>
     <div class="container">
+        <h3>Detail:</h3>
         <div class="cell">
             <div class="cover-img">
 
@@ -27,22 +28,23 @@
                 <span class="author-name">{{ .author }}</span> <br>
                 <span class="desc-info"> {{ .desc }} </span><br>
                 <hr>
-                
+
                 <span><a href="{{ .link }}"> Official Site </a> </span> <br>
             </div>
 
         </div>
-        <div class="random-books" >
+        <h3>More Books:</h3>
+        <div class="random-books" style="background: #fff">
             {{ range .books }}
-            <div class="book-cover" >
+            <div class="book-cover">
                 <a href="/books/show/{{.ID}}">
-                <img class="book-img" src="{{ .Cover }}" alt="">
+                    <img class="book-img" src="{{ .Cover }}" alt="">
                 </a>
             </div>
             {{end}}
         </div>
-        
-    
+
+
     </div>
 
 

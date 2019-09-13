@@ -1,14 +1,19 @@
 package main
 
 import (
-	"github.com/gin-gonic/gin"
+	"os"
 	"katehqbooks/controllers"
+	"log"
+
+	"github.com/gin-gonic/gin"
+	"github.com/joho/godotenv"
 )
 
 func main() {
 	r := gin.Default()
 	r.Static("/static", "./static")
 	r.LoadHTMLGlob("views/*")
+
 	//GET
 	r.GET("/", controllers.Index)
 	r.GET("/migrate", controllers.Migrate)
@@ -19,5 +24,10 @@ func main() {
 	//POST
 	r.POST("/books/new", controllers.AddBookPOST)
 	r.POST("/pages/new", controllers.AddPagePOST)
-	r.Run(":8080")
+	err := godotenv.Load()
+	if err != nil {
+		log.Fatal("Error loading .env file")
+	}
+	PORT := os.Getenv("PORT")
+	r.Run(PORT)
 }
