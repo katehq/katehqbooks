@@ -18,6 +18,6 @@ func main() {
 	r.GET("/page/:title", controllers.ShowPage)
 	//POST
 	r.POST("/books/new", controllers.AddBookPOST)
-
+	r.POST("/pages/new", controllers.AddPagePOST)
 	r.Run(":8080")
 }

@@ -1,5 +1,11 @@
 {{template "header"}}
 
-<form action="/" method="post"></form>
+<form action="/pages/new" method="post">
+    <label for="title">Title</label> <br>
+    <input type="text" name="title"><br>
+    <label for="content">Content</label> <br>
+    <input type="text" name="content"> <br>
+    <input type="submit" value="ADD">
+</form>
 
 {{template "footer"}}
