@@ -49,5 +49,12 @@ func (book *Book) GetLatest() []Book {
 	db := utils.OpenDB()
 	defer db.Close()
 	db.Order("created_at desc").Limit(8).Find(&books)
+	bookdetailsub(books)
 	return books
+}
+
+func bookdetailsub(books []Book){
+	for idx := range books {
+		books[idx].Desc = utils.Substring(books[idx].Desc, 0,200) + "..."
+	}
 }

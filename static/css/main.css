@@ -26,6 +26,7 @@ a:hover {
 }
 .container img {
     height: 60px;
+    min-width: 40px;
 }
 .container span {
     vertical-align: top;

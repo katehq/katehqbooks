@@ -5,6 +5,7 @@ import (
 	"katehqbooks/models"
 )
 
+// Migrate migrate the database
 func Migrate(c *gin.Context) {
 	models.AutoMigrate()
 }

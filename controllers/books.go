@@ -5,10 +5,12 @@ import (
 	"katehqbooks/models"
 )
 
+// AddBook handle the get request from the `/books/new`
 func AddBook(c *gin.Context) {
 	c.HTML(200, "addbook.html", gin.H{})
 }
 
+// AddBookPOST handle the post request from the `books/new`
 func AddBookPOST(c *gin.Context) {
 	title := c.PostForm("title")
 	author := c.PostForm("author")

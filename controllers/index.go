@@ -5,6 +5,7 @@ import (
 	"katehqbooks/models"
 )
 
+// Index home of my website
 func Index(c *gin.Context) {
 	var book models.Book
 	books := book.GetLatest()
